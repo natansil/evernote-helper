@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var callbackUrl = "http://localhost:3000/oauth_callback";
+var callbackUrl = "/oauth_callback";
 
 
 app.get('/oauth', function(req, res) {
