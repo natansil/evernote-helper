@@ -6,7 +6,10 @@
   "description": "evernote-helper",
   "main": "server.js",
   "dependencies": {
-    "evernote": "^1.25.82"
+    "body-parser": "^1.15.2",
+    "evernote": "^1.25.82",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0"
   },
   "devDependencies": {},
   "scripts": {
