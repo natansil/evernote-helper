@@ -1,0 +1,31 @@
+{
+  "name": "evernote-helper",
+  "version": "0.0.0",
+  "private": true,
+  "license": "see LICENSE file",
+  "description": "evernote-helper",
+  "main": "server.js",
+  "dependencies": {
+    "evernote": "^1.25.82"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natansil/evernote-helper"
+  },
+  "keywords": [
+    "evernote"
+  ],
+  "author": "natansil",
+  "bugs": {
+    "url": "https://github.com/natansil/evernote-helper/issues"
+  },
+  "homepage": "https://github.com/natansil/evernote-helper",
+  "engines": {
+    "node": "0.12.x"
+  }
+}
