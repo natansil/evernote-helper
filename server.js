@@ -3,6 +3,7 @@ var express = require('express'),
     path = require('path'),
     session = require('express-session'),
     bodyParser = require('body-parser'),
+    url = require('url'),
     Evernote = require('evernote').Evernote;
 
 var app = express();
@@ -23,7 +24,7 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var callbackUrl = "/oauth_callback";
+var callbackPath = "/oauth_callback";
 
 
 app.get('/oauth', function(req, res) {
@@ -32,6 +33,12 @@ app.get('/oauth', function(req, res) {
 	  consumerSecret: '1791cd44d28f0e63',
 	  sandbox: true
 	});
+
+	var callbackUrl = url.format({
+    protocol: req.protocol,
+    host: req.get('host'),
+    pathname: callbackPath
+  });
 
 	client.getRequestToken(callbackUrl, function(error, oauthToken, oauthTokenSecret, results) {
 	  if(error) {
